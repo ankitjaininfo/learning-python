@@ -6,12 +6,25 @@ score1=0
 score2=0
 score3=0
 score4=0
-for i in range(1):
+for i in range(10):
 	print("----- Starting Game ", i+1 , "--------")
 	w=float(input("Enter [" + p1 + "]'s score: "))
 	x=float(input("Enter [" + p2 + "]'s score: "))
 	y=float(input("Enter [" + p3 +"]'s score: "))
 	z=float(input("Enter [" + p4 + "]'s score: "))
+	if w not in [0, 200, 500, 1000]:
+	    print("Try again.",p1,"Invalid score:", w)
+	    continue
+	if x not in [0, 200, 500, 1000]:
+	    print("Try again.",p2,"Invalid score:", x)
+	    continue
+	if y not in [0, 200, 500, 1000]:
+	    print("Try again.",p3,"Invalid score:", y)
+	    continue
+	if z not in [0, 200, 500, 1000]:
+	    print("Try again.",p4,"Invalid score:", z)
+	    continue
+
 	score1=score1+w
 	score2=score2+x
 	score3=score3+y
